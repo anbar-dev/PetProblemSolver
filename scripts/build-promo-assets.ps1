@@ -168,6 +168,14 @@ $Articles = @(
       [pscustomobject]@{ File="pin-02.png"; Title="Do Not Buy Air Freshener First"; Subtitle="If waste is still in the room, fragrance just rides on top."; Bullets=@("Seal waste","Use enzyme cleaner","Skip perfume first"); Description="How to reduce litter box odor in a small room with a source-first setup. Full checklist on Cat Problem Solver. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" },
       [pscustomobject]@{ File="pin-03.png"; Title="Why the Box Still Smells After Scooping"; Subtitle="Check the pail, clumps, box plastic, and floor around it."; Bullets=@("Better pail","Cleaner clumps","Box hygiene"); Description="A small-home cat litter odor checklist: what to buy first, what to skip, and when it is not just a gear problem. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" }
     )
+  },
+  [pscustomobject]@{
+    Slug = "cat-carrier-hates-carrier"; Category = "Travel"; Board = "Cat Carrier and Vet Trip Fixes"; Url = "$BaseUrl/problems/travel-carriers/cat-carrier-hates-carrier/"; Keywords = "cat carrier for cats that hate carriers, anxious cat vet carrier, cat will not go in carrier, top load cat carrier, carrier training cat"; VideoHook = "If your cat vanishes when the carrier appears, the carrier has become the warning signal."
+    Pins = @(
+      [pscustomobject]@{ File="pin-01.png"; Title="Cat Hates the Carrier?"; Subtitle="Make the carrier normal before the next vet trip."; Bullets=@("Leave it out","Reward calm steps","Use top-load access"); Description="A practical carrier setup for cats that hate carriers, with what to buy first and what to skip before a vet trip. This page contains Amazon affiliate links. #ad"; Bg="#24463f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" },
+      [pscustomobject]@{ File="pin-02.png"; Title="Stop the Carrier Chase"; Subtitle="The fix starts days before the appointment."; Bullets=@("No surprise box","Treat routine","Cleanup backup"); Description="How to help an anxious cat accept a carrier with a top-load setup, treats, scent prep, and a 10-day reset. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" },
+      [pscustomobject]@{ File="pin-03.png"; Title="Top-Load Carrier First"; Subtitle="For nervous vet trips, access matters more than cute design."; Bullets=@("Hard carrier","Soft only if calm","Ask vet if severe"); Description="What carrier to buy for a cat that hates carriers, plus what accessories are actually useful. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" }
+    )
   }
 )
 
