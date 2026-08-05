@@ -176,6 +176,14 @@ $Articles = @(
       [pscustomobject]@{ File="pin-02.png"; Title="Stop the Carrier Chase"; Subtitle="The fix starts days before the appointment."; Bullets=@("No surprise box","Treat routine","Cleanup backup"); Description="How to help an anxious cat accept a carrier with a top-load setup, treats, scent prep, and a 10-day reset. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" },
       [pscustomobject]@{ File="pin-03.png"; Title="Top-Load Carrier First"; Subtitle="For nervous vet trips, access matters more than cute design."; Bullets=@("Hard carrier","Soft only if calm","Ask vet if severe"); Description="What carrier to buy for a cat that hates carriers, plus what accessories are actually useful. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" }
     )
+  },
+  [pscustomobject]@{
+    Slug = "cat-water-bowl-mess"; Category = "Feeding"; Board = "Cat Feeding and Water Fixes"; Url = "$BaseUrl/problems/feeding-water/cat-water-bowl-mess/"; Keywords = "cat water bowl mess, cat splashes water bowl, cat pushes water bowl, cat fountain cleanup, no spill cat bowl"; VideoHook = "If your cat makes a water bowl mess, identify the behavior before buying a fountain."
+    Pins = @(
+      [pscustomobject]@{ File="pin-01.png"; Title="Cat Water Bowl Mess?"; Subtitle="Splashing, pushing, and wet paws do not need the same fix."; Bullets=@("Watch one drink","Contain the station","Change one thing"); Description="A practical setup for cat water bowl mess, with what to buy first and what to skip. This page contains Amazon affiliate links. #ad"; Bg="#24463f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" },
+      [pscustomobject]@{ File="pin-02.png"; Title="Do Not Buy a Fountain First"; Subtitle="A mat or heavier bowl may fix the mess faster."; Bullets=@("Raised-edge mat","Heavy bowl","Fountain only if useful"); Description="How to stop cat water bowl splashes, pushed bowls, and wet floor mess without overbuying gear. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" },
+      [pscustomobject]@{ File="pin-03.png"; Title="Water Bowl Setup for Messy Cats"; Subtitle="Build the station around how your cat actually drinks."; Bullets=@("Splash zone","No-spill test","Cleaning routine"); Description="Cat water station checklist: mats, bowls, fountains, and what to skip for messy drinkers. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" }
+    )
   }
 )
 
