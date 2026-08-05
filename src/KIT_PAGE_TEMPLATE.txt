@@ -1,0 +1,39 @@
+<!--
+title: Page Title | Cat Problem Solver
+description: Short SEO description for this cat problem page.
+path: /problems/category-slug/page-slug/
+type: problem
+category: category-slug
+summary: One-sentence summary used on category cards.
+-->
+    <section class="page-hero">
+      <div class="page-title">
+        <p class="eyebrow">Category label</p>
+        <h1>Problem-focused headline.</h1>
+        <p>Short intro focused on the cat problem, not the product list.</p>
+      </div>
+    </section>
+    <section class="section compact">
+      <div class="scoreboard">
+        <div class="score"><span>Buy priority</span><strong>First</strong></div>
+        <div class="score"><span>Mess level</span><strong>Medium</strong></div>
+        <div class="score"><span>Training effort</span><strong>Light</strong></div>
+        <div class="score"><span>Best first buy</span><strong>Product type</strong></div>
+      </div>
+
+      <div class="article-shell">
+        <article>
+          <div class="disclosure">This page contains Amazon affiliate links. As an Amazon Associate, Cat Problem Solver earns from qualifying purchases. Product prices and availability can change on Amazon.</div>
+
+          <section class="content-block" id="verdict">
+            <h2>Quick verdict</h2>
+            <p>Write the practical answer here.</p>
+          </section>
+
+          <section class="content-block" id="first">
+            <h2>What to try first</h2>
+            <p>Start with the lowest-friction setup before buying a larger fix.</p>
+          </section>
+        </article>
+      </div>
+    </section>
