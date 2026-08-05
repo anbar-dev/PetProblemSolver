@@ -11,6 +11,7 @@ const site = {
   name: "Cat Problem Solver",
   baseUrl: "https://catproblemsolver.com",
   customDomain: "catproblemsolver.com",
+  googleAnalyticsId: "G-8FY92MXS8B",
   affiliateTag: "catprobs-20",
   description: "Practical fixes for annoying cat problems, with what to buy first and what to skip."
 };
@@ -212,6 +213,13 @@ function renderPage({ title, description, urlPath, body }) {
   <link rel="icon" type="image/png" sizes="192x192" href="${root}assets/brand/favicon-192.png">
   <link rel="apple-touch-icon" sizes="512x512" href="${root}assets/brand/favicon-512.png">
   <link rel="stylesheet" href="${root}assets/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsId}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${site.googleAnalyticsId}');
+  </script>
 </head>
 <body>
 ${renderHeader(root)}
