@@ -11,7 +11,6 @@ const site = {
   name: "Cat Problem Solver",
   baseUrl: "https://catproblemsolver.com",
   customDomain: "catproblemsolver.com",
-  analyticsId: "",
   affiliateTag: "catprobs-20",
   description: "Practical fixes for annoying cat problems, with what to buy first and what to skip."
 };
@@ -199,18 +198,6 @@ function renderFooter(root) {
   </footer>`;
 }
 
-function renderAnalytics() {
-  if (!site.analyticsId) return "";
-  return `  <script async src="https://www.googletagmanager.com/gtag/js?id=${site.analyticsId}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${site.analyticsId}');
-  </script>
-`;
-}
-
 function renderPage({ title, description, urlPath, body }) {
   const root = rootPrefix(urlPath);
   return `<!doctype html>
@@ -225,7 +212,6 @@ function renderPage({ title, description, urlPath, body }) {
   <link rel="icon" type="image/png" sizes="192x192" href="${root}assets/brand/favicon-192.png">
   <link rel="apple-touch-icon" sizes="512x512" href="${root}assets/brand/favicon-512.png">
   <link rel="stylesheet" href="${root}assets/style.css">
-${renderAnalytics().trimEnd()}
 </head>
 <body>
 ${renderHeader(root)}
@@ -240,10 +226,12 @@ ${renderFooter(root)}
 }
 
 function categoryCard(category) {
-  return `<article class="card kit-card">
-  <div class="pill-row"><span class="pill">${escapeHtml(category.eyebrow)}</span></div>
-  <h3>${escapeHtml(category.title)}</h3>
-  <p>${escapeHtml(category.description)}</p>
+  return `<article class="directory-item">
+  <span class="pill">${escapeHtml(category.eyebrow)}</span>
+  <div>
+    <h3>${escapeHtml(category.title)}</h3>
+    <p>${escapeHtml(category.description)}</p>
+  </div>
   <a class="link" href="${category.slug}/">Open category</a>
 </article>`;
 }
@@ -264,13 +252,15 @@ function renderProblemCards(pages, currentPath) {
 </div>`;
   }
 
-  return `<div class="grid three">
+  return `<div class="directory-list">
 ${pages.map((page) => {
     const href = relativeHref(currentPath, page.meta.path);
-    return `<article class="card kit-card">
-  <div class="pill-row"><span class="pill">${escapeHtml(page.meta.category || "Problem")}</span></div>
-  <h3>${escapeHtml(pageDisplayTitle(page))}</h3>
-  <p>${escapeHtml(page.meta.summary || page.meta.description)}</p>
+    return `<article class="directory-item">
+  <span class="pill">${escapeHtml(page.meta.category || "Problem")}</span>
+  <div>
+    <h3>${escapeHtml(pageDisplayTitle(page))}</h3>
+    <p>${escapeHtml(page.meta.summary || page.meta.description)}</p>
+  </div>
   <a class="link" href="${href}">Open fix</a>
 </article>`;
   }).join("\n")}
@@ -297,9 +287,9 @@ function renderCategoryPage(category, pages) {
       </div>
     </section>
     <section class="section">
-      <div class="section-title">
+      <div class="split-heading">
+        <p class="eyebrow">Available fixes</p>
         <div>
-          <p class="eyebrow">Available fixes</p>
           <h2>Start with the specific cat problem.</h2>
           <p>Each page keeps the buying list focused, explains what to try first, and calls out gear that is easy to overbuy.</p>
         </div>
@@ -340,7 +330,7 @@ function renderProblemsIndex() {
       </div>
     </section>
     <section class="section">
-      <div class="grid three">
+      <div class="directory-list">
         ${categories.map(categoryCard).join("\n")}
       </div>
     </section>`;

@@ -5,7 +5,7 @@ This is the operating manual for creating new Cat Problem Solver pages.
 If the chat history is unavailable, use this guide together with:
 
 - `CONTENT_ROADMAP.md` - what pages to create.
-- `src/KIT_PAGE_TEMPLATE.txt` - starter HTML structure.
+- `src/PROBLEM_PAGE_TEMPLATE.txt` - starter HTML structure.
 - `scripts/build-site.js` - site generator.
 - `README.md` - project/build overview.
 

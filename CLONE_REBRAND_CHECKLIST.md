@@ -30,7 +30,7 @@ README.md
 CONTENT_ROADMAP.md
 ARTICLE_CREATION_GUIDE.md
 PROMOTION_WORKFLOW.md
-src/KIT_PAGE_TEMPLATE.txt
+src/PROBLEM_PAGE_TEMPLATE.txt
 scripts/build-site.js
 scripts/build-promo-assets.ps1
 package.json
@@ -187,7 +187,7 @@ If removing categories, remove or rewrite their source folders.
 
 ## Update Templates
 
-Rewrite `src/KIT_PAGE_TEMPLATE.txt`.
+Rewrite `src/PROBLEM_PAGE_TEMPLATE.txt`.
 
 The template should match the new site vocabulary.
 
