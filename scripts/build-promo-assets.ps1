@@ -152,6 +152,14 @@ $Articles = @(
       [pscustomobject]@{ File="pin-02.png"; Title="Stop Litter Before It Hits the Bed"; Subtitle="Catch litter near the box before paws carry it into soft surfaces."; Bullets=@("Mat at the exit","Vacuum the spread zone","Change litter slowly"); Description="Cat litter tracking setup for floors, hallways, and bedding, with a compact product checklist. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" },
       [pscustomobject]@{ File="pin-03.png"; Title="Do Not Buy the Tiny Mat First"; Subtitle="If your cat steps past it, the mat is decoration."; Bullets=@("Measure the exit","Watch the paw path","Clean daily"); Description="What to buy first when cat litter tracks everywhere: mat, litter, paw wipes, and cleanup tools. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" }
     )
+  },
+  [pscustomobject]@{
+    Slug = "cat-scratching-couch"; Category = "Scratching"; Board = "Cat Scratching Fixes"; Url = "$BaseUrl/problems/scratching/cat-scratching-couch/"; Keywords = "cat scratching couch, stop cat scratching sofa, couch protector for cats, cat scratcher placement, cat claw care"; VideoHook = "If your cat scratches the couch, put the better scratch target where the couch is already winning."
+    Pins = @(
+      [pscustomobject]@{ File="pin-01.png"; Title="Cat Scratching the Couch?"; Subtitle="Start with the scratcher position, not another random deterrent."; Bullets=@("Match the angle","Guard one sofa spot","Reward the switch"); Description="A practical setup to stop cat scratching on couch corners and sofa arms, with what to buy first and what to skip. This page contains Amazon affiliate links. #ad"; Bg="#24463f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" },
+      [pscustomobject]@{ File="pin-02.png"; Title="Do Not Hide the Scratcher"; Subtitle="If the couch is in the social zone, the scratcher needs to start there too."; Bullets=@("Beside the couch","Tall and stable","Move it slowly"); Description="Stop cat scratching on the sofa by matching the scratching angle and protecting the target zone while the new habit sticks. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" },
+      [pscustomobject]@{ File="pin-03.png"; Title="Protect the Sofa Without Making It Weird"; Subtitle="Cover the claw target, then give your cat a better legal target."; Bullets=@("Couch guard","Sisal post","Nail tip care"); Description="Couch protector for cats plus the scratcher placement logic that actually matters. Full checklist on Cat Problem Solver. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" }
+    )
   }
 )
 
