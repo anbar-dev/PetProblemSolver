@@ -1,4 +1,4 @@
-# Short Video Script - litter-tracking-everywhere
+﻿# Short Video Script - litter-tracking-everywhere
 
 Length: 20-30 seconds
 Format: 9:16 vertical

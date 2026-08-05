@@ -1,4 +1,4 @@
-# Pinterest Copy - litter-tracking-everywhere
+﻿# Pinterest Copy - litter-tracking-everywhere
 
 Article URL: https://catproblemsolver.com/problems/litter-box/litter-tracking-everywhere/
 Board: Cat Litter Box Fixes

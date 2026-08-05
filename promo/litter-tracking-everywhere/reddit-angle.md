@@ -1,4 +1,4 @@
-# Reddit Angle - litter-tracking-everywhere
+﻿# Reddit Angle - litter-tracking-everywhere
 
 Use manually only where it is genuinely relevant. Do not drop links as the first move.
 

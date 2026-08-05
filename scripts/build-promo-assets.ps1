@@ -152,62 +152,6 @@ $Articles = @(
       [pscustomobject]@{ File="pin-02.png"; Title="Stop Litter Before It Hits the Bed"; Subtitle="Catch litter near the box before paws carry it into soft surfaces."; Bullets=@("Mat at the exit","Vacuum the spread zone","Change litter slowly"); Description="Cat litter tracking setup for floors, hallways, and bedding, with a compact product checklist. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" },
       [pscustomobject]@{ File="pin-03.png"; Title="Do Not Buy the Tiny Mat First"; Subtitle="If your cat steps past it, the mat is decoration."; Bullets=@("Measure the exit","Watch the paw path","Clean daily"); Description="What to buy first when cat litter tracks everywhere: mat, litter, paw wipes, and cleanup tools. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" }
     )
-  },
-  [pscustomobject]@{
-    Slug = "litter-box-smell-small-home"; Category = "Litter Box"; Board = "Cat Litter Box Fixes"; Url = "$BaseUrl/problems/litter-box/litter-box-smell-small-home/"; Keywords = "litter box smell, cat litter odor, small home cat box, odor control litter, cat box cleaning"; VideoHook = "If one litter box scents the whole room, perfume is not the first fix."
-    Pins = @(
-      [pscustomobject]@{ File="pin-01.png"; Title="Litter Box Smell in a Small Home"; Subtitle="Scoop rhythm, sealed waste, and box cleaning beat perfume-first fixes."; Bullets=@("Scoop daily","Seal waste fast","Avoid heavy fragrance"); Description="A small-home litter box smell setup with odor control, cleanup tools, and what to skip. #ad"; Bg="#6f8f86"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" },
-      [pscustomobject]@{ File="pin-02.png"; Title="Cat Box Smells Even When Clean?"; Subtitle="Check waste containment, box washing, litter type, and airflow."; Bullets=@("Better waste bin","Sturdy scoop","Careful airflow"); Description="How to reduce litter box smell without relying on strong scents around your cat. #ad"; Bg="#e7b85d"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" },
-      [pscustomobject]@{ File="pin-03.png"; Title="Do Not Hide Smell in a Stale Cabinet"; Subtitle="Hidden boxes need ventilation and a real cleaning routine."; Bullets=@("No stale enclosure","No open trash","Vet check sudden changes"); Description="Litter box odor control for small homes, including when gear is not enough. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" }
-    )
-  },
-  [pscustomobject]@{
-    Slug = "cat-scratching-couch"; Category = "Scratching"; Board = "Cat Scratching Solutions"; Url = "$BaseUrl/problems/scratching/cat-scratching-couch/"; Keywords = "cat scratching couch, couch protector cats, cat scratcher, stop cat scratching sofa, furniture protection"; VideoHook = "Couch protectors work better when a better scratcher is right next to the couch."
-    Pins = @(
-      [pscustomobject]@{ File="pin-01.png"; Title="Cat Scratching the Couch?"; Subtitle="Protect the damage zone and put the replacement scratcher beside it."; Bullets=@("Tall stable post","Couch guard","Nail care"); Description="A practical couch scratching fix with scratcher placement, surface protection, and what to skip. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" },
-      [pscustomobject]@{ File="pin-02.png"; Title="Tape Alone Will Not Save the Sofa"; Subtitle="Your cat still needs an acceptable scratching target nearby."; Bullets=@("Add a better target","Reward the switch","Skip punishment"); Description="How to stop cat scratching couch corners without turning it into a generic product list. #ad"; Bg="#24463f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" },
-      [pscustomobject]@{ File="pin-03.png"; Title="Couch Corner Protection for Cats"; Subtitle="A simple layered setup for the spot your cat already chose."; Bullets=@("Guard the corner","Place scratcher close","Trim gently"); Description="Couch protector and scratching post setup for cats that keep targeting sofa arms. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" }
-    )
-  },
-  [pscustomobject]@{
-    Slug = "cat-hair-everywhere"; Category = "Cleaning"; Board = "Cat Cleaning Tips"; Url = "$BaseUrl/problems/hair-cleaning/cat-hair-everywhere/"; Keywords = "cat hair everywhere, remove cat hair couch, cat hair laundry, cat grooming brush, pet hair remover"; VideoHook = "Cat hair everywhere needs a surface routine, not only more lint rollers."
-    Pins = @(
-      [pscustomobject]@{ File="pin-01.png"; Title="Cat Hair Everywhere?"; Subtitle="Split the fix into grooming, furniture, laundry, and washable nap zones."; Bullets=@("Reusable hair tool","Gentle brushing","Washable blanket"); Description="A practical cat hair cleanup setup for couches, clothes, bedding, and laundry. #ad"; Bg="#6f8f86"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" },
-      [pscustomobject]@{ File="pin-02.png"; Title="Stop Using Lint Rollers for the Whole Home"; Subtitle="Use reusable tools where hair actually collects every day."; Bullets=@("Couch tool","Laundry helper","Favorite spot cover"); Description="What to buy first when cat hair is on everything, with skip notes and cleanup priorities. #ad"; Bg="#e7b85d"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" },
-      [pscustomobject]@{ File="pin-03.png"; Title="Make the Nap Spot Washable"; Subtitle="Hair cleanup gets easier when the favorite spot has a removable layer."; Bullets=@("Cover the favorite chair","Brush lightly","Vacuum seams"); Description="Cat hair furniture and laundry setup for people tired of cleaning the same couch twice. #ad"; Bg="#24463f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" }
-    )
-  },
-  [pscustomobject]@{
-    Slug = "cat-water-bowl-mess"; Category = "Food And Water"; Board = "Cat Feeding Stations"; Url = "$BaseUrl/problems/feeding-water/cat-water-bowl-mess/"; Keywords = "cat water bowl mess, cat splashes water, cat pushes water bowl, cat water fountain, pet feeding mat"; VideoHook = "If your cat turns water into a splash zone, stabilize the station first."
-    Pins = @(
-      [pscustomobject]@{ File="pin-01.png"; Title="Cat Water Bowl Mess?"; Subtitle="Start with a splash mat and heavy bowl before replacing everything."; Bullets=@("Raised-edge mat","Heavy bowl","Separate water spot"); Description="A practical water bowl mess fix for cats that splash, push bowls, or leave wet floors. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" },
-      [pscustomobject]@{ File="pin-02.png"; Title="Cat Keeps Pushing the Water Bowl"; Subtitle="Weight, grip, and station placement usually matter first."; Bullets=@("Heavier bowl","Grippy mat","Clean weekly"); Description="Cat water station setup with bowls, mats, fountains, and what to skip. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" },
-      [pscustomobject]@{ File="pin-03.png"; Title="Before You Buy a Cat Fountain"; Subtitle="Fountains can help, but only if you will clean them often."; Bullets=@("Try bowl stability","Watch preference","Clean parts often"); Description="What to buy first for cat water bowl mess and when a fountain is worth it. #ad"; Bg="#6f8f86"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" }
-    )
-  },
-  [pscustomobject]@{
-    Slug = "ants-in-cat-food"; Category = "Food And Water"; Board = "Cat Feeding Stations"; Url = "$BaseUrl/problems/feeding-water/ants-in-cat-food/"; Keywords = "ants in cat food, ant proof cat bowl, cat food storage, cat feeding mat, keep ants out of cat bowl"; VideoHook = "Ants in cat food need a cleaner station and sealed storage, not sprays beside the bowl."
-    Pins = @(
-      [pscustomobject]@{ File="pin-01.png"; Title="Ants in Cat Food?"; Subtitle="Isolate the bowl, seal the food, and clean crumbs daily."; Bullets=@("Ant moat bowl","Sealed food bin","Daily wipe-down"); Description="A practical ant-resistant cat food setup with bowl, storage, mat, and safety notes. #ad"; Bg="#e7b85d"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" },
-      [pscustomobject]@{ File="pin-02.png"; Title="Do Not Spray Near the Cat Bowl"; Subtitle="Treat the entry point separately and keep the feeding station clean."; Bullets=@("No bowl-side sprays","Remove wet food","Use sealed storage"); Description="How to keep ants out of cat food without using unsafe shortcuts near the eating area. #ad"; Bg="#24463f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" },
-      [pscustomobject]@{ File="pin-03.png"; Title="Ant-Proof Cat Food Station"; Subtitle="A simple setup for bowls, crumbs, wet food, and storage."; Bullets=@("Moat bowl","Silicone mat","Can lids"); Description="Cat food ant proof bowl and feeding station ideas for recurring ant problems. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" }
-    )
-  },
-  [pscustomobject]@{
-    Slug = "cat-carrier-hates-carrier"; Category = "Travel"; Board = "Cat Carrier And Vet Tips"; Url = "$BaseUrl/problems/travel-carriers/cat-carrier-hates-carrier/"; Keywords = "cat hates carrier, top load cat carrier, anxious cat vet trip, carrier training cat, cat carrier pad"; VideoHook = "For cats that hate carriers, the best carrier is the one you can practice with before vet day."
-    Pins = @(
-      [pscustomobject]@{ File="pin-01.png"; Title="Cat Hates the Carrier?"; Subtitle="A top-load carrier and tiny treat sessions can make vet day less awful."; Bullets=@("Top-load access","Leave it out","Washable pad"); Description="A low-stress carrier setup for cats that hide, fight, or panic before vet trips. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" },
-      [pscustomobject]@{ File="pin-02.png"; Title="Do Not Hide the Carrier Until Vet Day"; Subtitle="Make the carrier normal before it becomes urgent."; Bullets=@("Open at home","Treat practice","Cover for calm"); Description="Cat carrier setup for cats that hate carriers, with what to buy first and what to skip. #ad"; Bg="#6f8f86"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" },
-      [pscustomobject]@{ File="pin-03.png"; Title="Top-Load Carrier for Scared Cats"; Subtitle="A wider opening can reduce the wrestling match."; Bullets=@("Sturdy latches","Soft pad","Short practice"); Description="Carrier tips for anxious cats and stressful vet trips, including gentle setup notes. #ad"; Bg="#24463f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" }
-    )
-  },
-  [pscustomobject]@{
-    Slug = "cat-wakes-me-up-at-night"; Category = "Behavior"; Board = "Cat Behavior Support"; Url = "$BaseUrl/problems/behavior-support/cat-wakes-me-up-at-night/"; Keywords = "cat wakes me up at night, automatic cat feeder, cat meows at night, puzzle feeder cat, cat night routine"; VideoHook = "If your cat wakes you for food, move the food reward away from your pillow."
-    Pins = @(
-      [pscustomobject]@{ File="pin-01.png"; Title="Cat Wakes You Up at Night?"; Subtitle="Move food rewards to a timed feeder and play hard before bed."; Bullets=@("Timed feeder","Evening play","Consistent boundary"); Description="A practical setup for cats that wake owners at night for food, attention, or play. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" },
-      [pscustomobject]@{ File="pin-02.png"; Title="Stop the 4 AM Breakfast Routine"; Subtitle="If the wakeup works, your cat will keep using it."; Bullets=@("Auto feeder","Puzzle dinner","No bed feeding"); Description="What to buy first when a cat wakes you up at night, plus what to skip. #ad"; Bg="#e7b85d"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" },
-      [pscustomobject]@{ File="pin-03.png"; Title="Night Waking Cat Setup"; Subtitle="Food timing, play, and quiet enrichment before more random toys."; Bullets=@("Wand play","Timed snack","Vet check sudden changes"); Description="Cat night waking setup with feeder, enrichment, and health boundary notes. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" }
-    )
   }
 )
 
