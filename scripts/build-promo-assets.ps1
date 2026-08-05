@@ -160,6 +160,14 @@ $Articles = @(
       [pscustomobject]@{ File="pin-02.png"; Title="Do Not Hide the Scratcher"; Subtitle="If the couch is in the social zone, the scratcher needs to start there too."; Bullets=@("Beside the couch","Tall and stable","Move it slowly"); Description="Stop cat scratching on the sofa by matching the scratching angle and protecting the target zone while the new habit sticks. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" },
       [pscustomobject]@{ File="pin-03.png"; Title="Protect the Sofa Without Making It Weird"; Subtitle="Cover the claw target, then give your cat a better legal target."; Bullets=@("Couch guard","Sisal post","Nail tip care"); Description="Couch protector for cats plus the scratcher placement logic that actually matters. Full checklist on Cat Problem Solver. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" }
     )
+  },
+  [pscustomobject]@{
+    Slug = "litter-box-smell-small-home"; Category = "Litter Box"; Board = "Cat Litter Box Fixes"; Url = "$BaseUrl/problems/litter-box/litter-box-smell-small-home/"; Keywords = "litter box smell small home, cat box smell even when clean, litter odor setup, cat urine smell cleaner, litter pail"; VideoHook = "If your small home smells like the litter box, fix the waste path before buying air freshener."
+    Pins = @(
+      [pscustomobject]@{ File="pin-01.png"; Title="Litter Box Smell in a Small Home?"; Subtitle="Start with the odor source, not perfume on top of it."; Bullets=@("Scoop and seal","Hard clumps","Clean the box"); Description="A practical odor-control setup for litter box smell in a small home, with what to buy first and what to skip. This page contains Amazon affiliate links. #ad"; Bg="#24463f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#c76b57" },
+      [pscustomobject]@{ File="pin-02.png"; Title="Do Not Buy Air Freshener First"; Subtitle="If waste is still in the room, fragrance just rides on top."; Bullets=@("Seal waste","Use enzyme cleaner","Skip perfume first"); Description="How to reduce litter box odor in a small room with a source-first setup. Full checklist on Cat Problem Solver. #ad"; Bg="#3f6f8f"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#e7b85d" },
+      [pscustomobject]@{ File="pin-03.png"; Title="Why the Box Still Smells After Scooping"; Subtitle="Check the pail, clumps, box plastic, and floor around it."; Bullets=@("Better pail","Cleaner clumps","Box hygiene"); Description="A small-home cat litter odor checklist: what to buy first, what to skip, and when it is not just a gear problem. #ad"; Bg="#c76b57"; Panel="#fbfaf6"; Ink="#1f2523"; Muted="#62685f"; Accent="#24463f" }
+    )
   }
 )
 

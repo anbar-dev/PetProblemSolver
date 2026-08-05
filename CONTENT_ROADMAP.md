@@ -69,7 +69,7 @@ The site uses a tiny static generator:
 | Status | Category | Page title | Suggested URL | Long-tail targets | Product types |
 | --- | --- | --- | --- | --- | --- |
 | published | Litter box | Cat Litter Tracking Everywhere Fix | `/problems/litter-box/litter-tracking-everywhere/` | cat litter tracking everywhere; litter stuck in cat paws; how to stop litter tracking | litter mat, low-tracking litter, paw wipes, hand vacuum, scoop holder |
-| planned | Litter box | Litter Box Smell in a Small Home | `/problems/litter-box/litter-box-smell-small-home/` | litter box smell small home; cat box smell even when clean; best litter odor setup | clumping litter, carbon filter, stainless scoop, enzyme cleaner, trash can |
+| published | Litter box | Litter Box Smell in a Small Home | `/problems/litter-box/litter-box-smell-small-home/` | litter box smell small home; cat box smell even when clean; best litter odor setup | clumping litter, carbon filter, stainless scoop, enzyme cleaner, trash can |
 | published | Scratching | Cat Scratching Couch Fix | `/problems/scratching/cat-scratching-couch/` | cat scratching couch; stop cat scratching sofa; couch protector for cats | vertical scratcher, horizontal scratcher, couch guard, tape, nail clippers |
 | planned | Hair and cleaning | Cat Hair Everywhere Cleanup Setup | `/problems/hair-cleaning/cat-hair-everywhere/` | cat hair everywhere; remove cat hair from couch; cat hair laundry fix | grooming brush, lint roller, pet hair remover, vacuum attachment, laundry catcher |
 | planned | Feeding and water | Cat Water Bowl Mess Fix | `/problems/feeding-water/cat-water-bowl-mess/` | cat water bowl mess; cat splashes water bowl; cat pushes water bowl | splash mat, heavy bowl, fountain, raised tray, towel system |
