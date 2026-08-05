@@ -33,13 +33,9 @@ Amazon Associates tag:
 catprobs-20
 ```
 
-Use this tag in every Amazon product link. Search links are acceptable for product-type recommendations when a specific ASIN has not been verified:
+Use this tag in every Amazon product link.
 
-```html
-https://www.amazon.com/s?k=cat+litter+mat&tag=catprobs-20
-```
-
-For exact product pages, use a verified current Amazon product URL and direct image URL from the product page. Do not invent ASINs or image URLs.
+Published recommendations should use verified Amazon product pages with ASIN-based URLs, not generic Amazon search links. Use a direct image URL from Amazon only after verifying it against the live product listing or an approved Amazon Associates image source. Do not invent ASINs or image URLs.
 
 Do not manually state Amazon prices, ratings, review counts, Prime status, shipping claims, or availability.
 
@@ -173,17 +169,17 @@ Each product card should include:
 - when to skip it;
 - Amazon button with `tag=catprobs-20`.
 
-Example with a product-type search link:
+Example with a verified product link:
 
 ```html
 <div class="product">
-  <a class="product-media placeholder" href="https://www.amazon.com/s?k=cat+litter+mat&tag=catprobs-20" rel="sponsored nofollow noopener" target="_blank">
-    <span>Litter mat</span>
+  <a class="product-media" href="https://www.amazon.com/dp/B01AUU90IW?tag=catprobs-20" rel="sponsored nofollow noopener" target="_blank">
+    <img src="https://m.media-amazon.com/images/I/91+T1q4QeAL._AC_UL640_QL65_.jpg" alt="iPrimio Cat Litter Trapper Mat">
   </a>
   <div>
-    <h3>Large litter mat <span>for tracking at the box exit</span></h3>
+    <h3>iPrimio Cat Litter Trapper Mat <span>for tracking at the box exit</span></h3>
     <p>Use it where the cat actually steps out. Skip oversized mats if they block the path and make your cat jump over them.</p>
-    <a class="button amazon" href="https://www.amazon.com/s?k=cat+litter+mat&tag=catprobs-20">View on Amazon</a>
+    <a class="button amazon" href="https://www.amazon.com/dp/B01AUU90IW?tag=catprobs-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon</a>
   </div>
 </div>
 ```
