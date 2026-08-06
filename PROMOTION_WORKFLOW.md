@@ -1,10 +1,12 @@
 # Promotion Workflow
 
-This file describes the low-effort distribution flow for Cat Problem Solver.
+This file is an archived, on-demand distribution workflow for Cat Problem Solver.
+
+Do not use this workflow when the user simply asks for a new article. The default article workflow is HTML-only: create/update `src/problems/`, update `CONTENT_ROADMAP.md`, rebuild `docs/`, commit, and push. Promo generation is intentionally disabled by default to save credits/time.
 
 ## Current Strategy
 
-For every strong article, create a small promo pack:
+Only when the user explicitly asks for Pinterest/social promo assets, create a small promo pack:
 
 - 3 Pinterest-ready vertical PNGs.
 - Pinterest bulk upload CSV rows.
@@ -119,7 +121,7 @@ Pinterest descriptions should include a clear disclosure such as `#ad` when the 
 Generate promo assets:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build-promo-assets.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build-promo-assets.ps1 -GeneratePromo
 ```
 
 Rebuild site:
@@ -129,3 +131,5 @@ npm run build
 ```
 
 If normal Node is unavailable, Codex can use its bundled Node runtime.
+
+Running `scripts/build-promo-assets.ps1` without `-GeneratePromo` exits without generating files. This guard exists so routine article work does not accidentally create pins, CSVs, video briefs, or Reddit-angle files.

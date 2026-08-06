@@ -2,6 +2,18 @@
 
 This is the operating manual for creating new Cat Problem Solver pages.
 
+## Default Mode: Article Only
+
+When the user asks to "create an article", "add another article", or similar, do only the article workflow:
+
+- create the article source HTML under `src/problems/`;
+- update `CONTENT_ROADMAP.md`;
+- rebuild `docs/`;
+- verify the generated page, sitemap, affiliate links, product images, and Google Analytics tag;
+- commit and push.
+
+Do not create or update Pinterest pins, promo CSV files, video scripts, Fiverr briefs, Reddit-angle files, or any other `promo/` assets unless the user explicitly asks for promotional assets. Promo work is intentionally on-demand to save credits and keep article production focused.
+
 If the chat history is unavailable, use this guide together with:
 
 - `CONTENT_ROADMAP.md` - what pages to create.
@@ -50,7 +62,6 @@ src/pages/
 src/problems/
 assets/
 scripts/
-promo/
 CONTENT_ROADMAP.md
 ARTICLE_CREATION_GUIDE.md
 PROMOTION_WORKFLOW.md
@@ -115,7 +126,8 @@ The builder automatically:
 - places the page in the correct category;
 - updates category pages;
 - updates `sitemap.xml`;
-- copies assets and promo files into `docs/`.
+- copies assets into `docs/`;
+- copies existing `promo/` files into `docs/promo/` when they already exist.
 
 ## Page Structure
 
@@ -296,19 +308,22 @@ After creating a page:
    ```
 
 2. Update `CONTENT_ROADMAP.md` status from `next` or `planned` to `published`.
-3. Rebuild:
+3. Do not run `scripts/build-promo-assets.ps1` for normal article creation.
+4. Rebuild:
 
    ```powershell
    npm run build
    ```
 
-4. Verify:
+5. Verify:
 
    - generated page exists under `docs/`;
    - category page links to it;
    - `docs/sitemap.xml` includes it;
    - Amazon links include `tag=catprobs-20`;
    - no placeholder tag remains;
+   - all product image URLs used by the article respond;
+   - Google Analytics tag `G-8FY92MXS8B` remains present in generated HTML;
    - no links point to unpublished pages unless intentionally linking to category hubs.
 
 Useful checks:
@@ -318,18 +333,13 @@ rg -n "placeholder-affiliate-tag|tag=previous-affiliate-tag" .
 rg -n "tag=catprobs-20" docs
 Get-Content .\docs\sitemap.xml
 ```
-
 ## Current Published Problem Pages
 
 - `/problems/litter-box/litter-tracking-everywhere/`
 - `/problems/litter-box/litter-box-smell-small-home/`
 - `/problems/scratching/cat-scratching-couch/`
-- `/problems/hair-cleaning/cat-hair-everywhere/`
 - `/problems/feeding-water/cat-water-bowl-mess/`
-- `/problems/feeding-water/ants-in-cat-food/`
 - `/problems/travel-carriers/cat-carrier-hates-carrier/`
-- `/problems/behavior-support/cat-wakes-me-up-at-night/`
-
 ## Recommended Next Pages
 
 - `/problems/scratching/cat-scratching-carpet-corners/`
@@ -339,20 +349,21 @@ Get-Content .\docs\sitemap.xml
 
 ## Promotion Workflow
 
-After publishing a strong page, generate a promo pack:
+Promotion is not part of normal article creation.
+
+If, and only if, the user explicitly asks for Pinterest/social promo assets, use the archived workflow in `PROMOTION_WORKFLOW.md` and run:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build-promo-assets.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build-promo-assets.ps1 -GeneratePromo
 ```
 
-Promo packs live in `promo/` and are copied into `docs/promo/` by the static site build.
+Promo packs live in `promo/` and are copied into `docs/promo/` by the static site build. Existing promo packs are preserved as an archive.
 
 Pins should link to the article page, not directly to Amazon.
 
 Use unique UTM-tagged article URLs for multiple Pin variants of the same page, otherwise Pinterest may reject extra rows with `Duplicate Pin link`.
 
 Use `promo/PINTEREST_LEDGER.csv` as the durable memory for Pinterest status. After generating promotion assets, prefer `promo/pinterest-upload-now.csv` and `promo/pinterest-upload-scheduled.csv`; use `promo/pinterest-upload-next.csv` only as the combined pending batch.
-
 Live URL pattern:
 
 ```text

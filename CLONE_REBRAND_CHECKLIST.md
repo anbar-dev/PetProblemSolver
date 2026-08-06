@@ -1,6 +1,6 @@
 # Clone Rebrand Checklist
 
-Use this checklist when duplicating this project to create another focused affiliate site from the same static-site engine, article workflow, and promotion workflow.
+Use this checklist when duplicating this project to create another focused affiliate site from the same static-site engine and article workflow. Promotion assets are archived/on-demand only, not part of routine article creation.
 
 The goal is to preserve the parts that work:
 
@@ -306,7 +306,7 @@ Recommended launch sequence:
 1. Rebrand site shell and generator.
 2. Rewrite roadmap and article guide.
 3. Publish 5-10 strong articles.
-4. Generate promo packs for the strongest pages.
+4. Generate promo packs only if the user explicitly asks for Pinterest/social promo assets.
 5. Rebuild and verify.
 6. Push to GitHub Pages.
 7. Upload first small Pinterest batch.

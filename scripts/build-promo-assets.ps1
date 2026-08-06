@@ -1,3 +1,14 @@
+param(
+  [switch]$GeneratePromo
+)
+
+if (-not $GeneratePromo) {
+  Write-Host "Promo generation skipped."
+  Write-Host "Default article workflow is HTML-only: create/update src, rebuild docs, commit, and push."
+  Write-Host "Run this script with -GeneratePromo only when the user explicitly asks for Pinterest/social promo assets."
+  exit 0
+}
+
 Add-Type -AssemblyName System.Drawing
 
 $ErrorActionPreference = "Stop"
