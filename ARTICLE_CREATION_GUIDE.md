@@ -14,6 +14,21 @@ When the user asks to "create an article", "add another article", or similar, do
 
 Do not create or update Pinterest pins, promo CSV files, video scripts, Fiverr briefs, Reddit-angle files, or any other `promo/` assets unless the user explicitly asks for promotional assets. Promo work is intentionally on-demand to save credits and keep article production focused.
 
+## Credit-Light Context Rules
+
+Article creation should be efficient. Do not reread the whole repository, every guide, every existing article, or generated `docs/` output unless something is broken.
+
+Minimum context before writing an article:
+
+- `README.md` for the current workflow trigger.
+- This `ARTICLE_CREATION_GUIDE.md`.
+- The relevant row or nearby section in `CONTENT_ROADMAP.md`.
+- `src/PROBLEM_PAGE_TEMPLATE.txt` only if structure is unclear.
+- One existing article only when style needs a quick reference.
+- `scripts/build-site.js` only when build behavior or metadata rules are unclear.
+
+Use targeted searches (`rg`) and small file slices instead of dumping long files into context. Keep new articles focused rather than encyclopedic: practical answer, 4-6 strong products when possible, clear skip notes, FAQ, JSON-LD, and no promo files.
+
 If the chat history is unavailable, use this guide together with:
 
 - `CONTENT_ROADMAP.md` - what pages to create.
@@ -283,9 +298,11 @@ Hero/category imagery:
 
 Product images:
 
-- Use direct Amazon product images only after verifying them from a current product page.
-- Do not download Amazon product images into the repository.
-- If exact images are not verified, use text-based product cards with the `.product-media.placeholder` style.
+- Product cards in published articles must include visible product images.
+- It is acceptable to use direct Amazon product image URLs found on the live Amazon product page or its current page data. We already have an agreement/approval path with Amazon for using those product images in this affiliate context.
+- Do not download Amazon product images into the repository; reference them remotely.
+- Verify that each product image URL responds before committing.
+- Do not publish new articles with placeholder product cards, missing product images, or generic Amazon search links.
 
 ## Research Workflow
 
@@ -293,9 +310,10 @@ Before writing a page:
 
 1. Pick a `next` page from `CONTENT_ROADMAP.md`, or follow the user's requested topic.
 2. Search current products only if choosing exact products or ASINs.
-3. Prefer product types over fake specificity.
-4. Do not rely on stale prices, ratings, review counts, Prime status, or availability.
-5. Choose products that fit the cat problem and welfare constraints.
+3. Use verified Amazon product pages, ASIN links, and product images found on the current product page/page data.
+4. Prefer fewer solid products over fake specificity or huge lists.
+5. Do not rely on stale prices, ratings, review counts, Prime status, or availability.
+6. Choose products that fit the cat problem and welfare constraints.
 
 ## Build Workflow
 
@@ -333,6 +351,8 @@ rg -n "placeholder-affiliate-tag|tag=previous-affiliate-tag" .
 rg -n "tag=catprobs-20" docs
 Get-Content .\docs\sitemap.xml
 ```
+
+
 ## Current Published Problem Pages
 
 - `/problems/litter-box/litter-tracking-everywhere/`
@@ -364,6 +384,7 @@ Pins should link to the article page, not directly to Amazon.
 Use unique UTM-tagged article URLs for multiple Pin variants of the same page, otherwise Pinterest may reject extra rows with `Duplicate Pin link`.
 
 Use `promo/PINTEREST_LEDGER.csv` as the durable memory for Pinterest status. After generating promotion assets, prefer `promo/pinterest-upload-now.csv` and `promo/pinterest-upload-scheduled.csv`; use `promo/pinterest-upload-next.csv` only as the combined pending batch.
+
 Live URL pattern:
 
 ```text

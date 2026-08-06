@@ -23,12 +23,15 @@ npm run build
 
 ## Article Workflow
 
+When the user says "crea articolo", "crea un articolo", "fai un altro articolo", or similar, first follow `ARTICLE_CREATION_GUIDE.md`. That guide is the source of truth for article creation.
+
 Default article work is article-only:
 
-1. Create or update the source HTML page under `src/problems/`.
-2. Update `CONTENT_ROADMAP.md`.
-3. Run the site build.
-4. Commit and push the article plus generated `docs/` output.
+1. Read only the minimum context required by `ARTICLE_CREATION_GUIDE.md`.
+2. Create or update the source HTML page under `src/problems/`.
+3. Update `CONTENT_ROADMAP.md`.
+4. Run the site build.
+5. Commit and push the article plus generated `docs/` output.
 
 Do not generate Pinterest pins, promo CSV files, video briefs, Fiverr briefs, or Reddit-angle files when the user only asks for a new article. This keeps article production lean and avoids spending unnecessary credits/time.
 
