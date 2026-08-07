@@ -79,7 +79,7 @@ The site uses a tiny static generator:
 | published | Scratching | Cat Scratching Carpet Corners | `/problems/scratching/cat-scratching-carpet-corners/` | cat scratching carpet corners; protect carpet from cat; cat scratching stairs carpet | carpet protector, horizontal scratcher, tape, nail care, rug |
 | published | Hair and cleaning | Cat Hair on Black Clothes | `/problems/hair-cleaning/cat-hair-black-clothes/` | cat hair on black clothes; remove cat hair from laundry; best lint routine cat hair | laundry catcher, dryer sheets, lint roller, brush, garment bag |
 | published | Small home | Hide Litter Box Without Trapping Smell | `/problems/small-home/hide-litter-box-without-smell/` | hide litter box smell; hidden litter box ventilation; small home litter setup | litter cabinet, carbon filter, mat, scoop station, air purifier |
-| next | Behavior support | Cat Jumps on Counters Setup | `/problems/behavior-support/cat-jumps-on-counters/` | cat jumps on counters; keep cat off kitchen counter; cat counter surfing | deterrent mat, cat tree, treat puzzle, cleaning spray, food storage |
+| published | Behavior support | Cat Jumps on Counters Setup | `/problems/behavior-support/cat-jumps-on-counters/` | cat jumps on counters; keep cat off kitchen counter; cat counter surfing | deterrent mat, cat tree, treat puzzle, cleaning spray, food storage |
 
 ## 100+ Article Idea Backlog
 
