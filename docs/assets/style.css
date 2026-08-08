@@ -815,9 +815,9 @@ h1 {
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: #f8fafc;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
   overflow: hidden;
 }
 
