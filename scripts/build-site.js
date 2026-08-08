@@ -233,9 +233,26 @@ ${renderFooter(root)}
 `;
 }
 
-function categoryCard(category) {
+function formatArticleCount(count) {
+  return `${count} article${count === 1 ? "" : "s"}`;
+}
+
+function categoryArticleCount(category, pages) {
+  return pages.filter((page) => page.meta.category === category.slug && page.meta.type === "problem").length;
+}
+
+function hydrateCategoryCounts(body, pages) {
+  return body.replace(/(<span\s+data-category-count="([^"]+)">)[^<]*(<\/span>)/g, (match, start, slug, end) => {
+    const category = categories.find((item) => item.slug === slug);
+    if (!category) return match;
+    return `${start}${formatArticleCount(categoryArticleCount(category, pages))}${end}`;
+  });
+}
+
+function categoryCard(category, pages) {
+  const count = categoryArticleCount(category, pages);
   return `<article class="directory-item">
-  <span class="pill">${escapeHtml(category.eyebrow)}</span>
+  <span class="pill">${escapeHtml(category.eyebrow)} · ${formatArticleCount(count)}</span>
   <div>
     <h3>${escapeHtml(category.title)}</h3>
     <p>${escapeHtml(category.description)}</p>
@@ -328,7 +345,7 @@ function renderCategoryPage(category, pages) {
   };
 }
 
-function renderProblemsIndex() {
+function renderProblemsIndex(pages) {
   const body = `
     <section class="page-hero">
       <div class="page-title">
@@ -339,7 +356,7 @@ function renderProblemsIndex() {
     </section>
     <section class="section">
       <div class="directory-list">
-        ${categories.map(categoryCard).join("\n")}
+        ${categories.map((category) => categoryCard(category, pages)).join("\n")}
       </div>
     </section>`;
 
@@ -450,12 +467,12 @@ function build() {
         title: page.meta.title,
         description: page.meta.description,
         urlPath: page.meta.path,
-        body: page.body
+        body: hydrateCategoryCounts(page.body, pages)
       })
     });
   }
 
-  outputs.push(renderProblemsIndex());
+  outputs.push(renderProblemsIndex(pages));
   if (pages.some((page) => page.meta.type === "guide")) {
     outputs.push(renderGuidesIndex(pages));
   }
