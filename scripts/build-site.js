@@ -237,12 +237,24 @@ function formatArticleCount(count) {
   return `${count} article${count === 1 ? "" : "s"}`;
 }
 
+function categoryToneClass(category) {
+  return {
+    "litter-box": "",
+    scratching: "warning",
+    "hair-cleaning": "blue",
+    "feeding-water": "amber",
+    "travel-carriers": "coral",
+    "small-home": "plum",
+    "behavior-support": "sky"
+  }[category.slug] || "";
+}
+
 function categoryArticleCount(category, pages) {
   return pages.filter((page) => page.meta.category === category.slug && page.meta.type === "problem").length;
 }
 
 function hydrateCategoryCounts(body, pages) {
-  return body.replace(/(<span\s+data-category-count="([^"]+)">)[^<]*(<\/span>)/g, (match, start, slug, end) => {
+  return body.replace(/(<span[^>]*data-category-count="([^"]+)"[^>]*>)[^<]*(<\/span>)/g, (match, start, slug, end) => {
     const category = categories.find((item) => item.slug === slug);
     if (!category) return match;
     return `${start}${formatArticleCount(categoryArticleCount(category, pages))}${end}`;
@@ -251,13 +263,15 @@ function hydrateCategoryCounts(body, pages) {
 
 function categoryCard(category, pages) {
   const count = categoryArticleCount(category, pages);
+  const tone = categoryToneClass(category);
+  const pillClass = tone ? `pill ${tone}` : "pill";
   return `<article class="directory-item">
-  <span class="pill">${escapeHtml(category.eyebrow)} · ${formatArticleCount(count)}</span>
+  <span class="${pillClass}">${escapeHtml(category.eyebrow)}</span>
   <div>
     <h3>${escapeHtml(category.title)}</h3>
     <p>${escapeHtml(category.description)}</p>
   </div>
-  <a class="link" href="${category.slug}/">Open category</a>
+  <div class="directory-action"><span class="article-count">${formatArticleCount(count)}</span><a class="link" href="${category.slug}/">Open category</a></div>
 </article>`;
 }
 

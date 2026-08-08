@@ -556,6 +556,39 @@ h1 {
   color: #315773;
 }
 
+.pill.amber {
+  background: #fffbeb;
+  color: #8a5a00;
+}
+
+.pill.coral {
+  background: #fff1f2;
+  color: #9f3546;
+}
+
+.pill.plum {
+  background: #f5f3ff;
+  color: #5b43a6;
+}
+
+.pill.sky {
+  background: #ecfeff;
+  color: #0f6a75;
+}
+
+.directory-action {
+  display: grid;
+  justify-items: end;
+  gap: 7px;
+}
+
+.article-count {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
 .finder {
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
@@ -1072,6 +1105,10 @@ h1 {
   .fix-row .link,
   .directory-item .link {
     white-space: normal;
+  }
+
+  .directory-action {
+    justify-items: start;
   }
 
   .grid.three,
