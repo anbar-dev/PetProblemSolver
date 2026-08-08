@@ -1,4 +1,5 @@
 const fs = require("fs");
+const crypto = require("crypto");
 const path = require("path");
 
 const rootDir = path.resolve(__dirname, "..");
@@ -15,6 +16,12 @@ const site = {
   affiliateTag: "catprobs-20",
   description: "Practical fixes for annoying cat problems, with what to buy first and what to skip."
 };
+
+site.assetVersion = crypto
+  .createHash("sha1")
+  .update(fs.readFileSync(path.join(assetSource, "style.css")))
+  .digest("hex")
+  .slice(0, 10);
 
 const categories = [
   {
@@ -212,7 +219,7 @@ function renderPage({ title, description, urlPath, body }) {
   <link rel="icon" type="image/png" sizes="32x32" href="${root}assets/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="${root}assets/brand/favicon-192.png">
   <link rel="apple-touch-icon" sizes="512x512" href="${root}assets/brand/favicon-512.png">
-  <link rel="stylesheet" href="${root}assets/style.css">
+  <link rel="stylesheet" href="${root}assets/style.css?v=${site.assetVersion}">
   <script async src="https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsId}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
