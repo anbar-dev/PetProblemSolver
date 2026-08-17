@@ -85,7 +85,7 @@ The site uses a tiny static generator:
 
 | Status | Category | Page title | Suggested URL | Long-tail targets | Product types |
 | --- | --- | --- | --- | --- | --- |
-| planned | Litter box | Litter Box Dust Control | `/problems/litter-box/litter-box-dust-control/` | dusty cat litter; cat litter dust everywhere; low dust litter setup | low-dust litter, mat, scoop, air purifier, storage bin |
+| published | Litter box | Litter Box Dust Control | `/problems/litter-box/litter-box-dust-control/` | dusty cat litter; cat litter dust everywhere; low dust litter setup | low-dust litter, mat, scoop, air purifier, storage bin |
 | planned | Litter box | Litter Box in Bedroom Setup | `/problems/litter-box/litter-box-bedroom/` | litter box in bedroom smell; bedroom litter box setup; small room cat box | enclosed tray, mat, carbon filter, quiet trash can, air purifier |
 | planned | Litter box | Covered vs Open Litter Box | `/problems/litter-box/covered-vs-open-litter-box/` | covered litter box smell; open litter box tracking; cat refuses covered box | open box, covered box, mat, liner, scoop |
 | planned | Litter box | Multiple Cats Litter Box Setup | `/problems/litter-box/multiple-cats-litter-box-setup/` | multiple cats litter box setup; two cats litter box smell; cats sharing litter box | extra box, mat, scoop, trash can, odor control |
