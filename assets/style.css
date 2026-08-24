@@ -244,6 +244,12 @@ h1 {
   transform: translateY(-1px);
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
 .home-intro {
   border-bottom: 1px solid var(--line);
   background: #fff;
@@ -780,6 +786,10 @@ h1 {
   font-weight: 700;
 }
 
+.request-output {
+  min-height: 130px;
+}
+
 .contact-aside {
   display: grid;
   gap: 18px;
@@ -1132,6 +1142,7 @@ h1 {
 
   .sidebar {
     position: static;
+    order: -1;
   }
 
   .trust-strip div {

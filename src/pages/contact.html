@@ -1,19 +1,19 @@
 <!--
-title: Contact | Cat Problem Solver
-description: Request a future Cat Problem Solver article or send feedback.
+title: Suggest a Topic | Cat Problem Solver
+description: Prepare a clear topic request for a future Cat Problem Solver article.
 path: /contact/
 type: page
 -->
     <section class="page-hero">
       <div class="page-title">
-        <p class="eyebrow">Contact</p>
-        <h1>Request a cat problem fix.</h1>
-        <p>Use this placeholder form to shape future pages around real, specific cat-owner problems.</p>
+        <p class="eyebrow">Suggest a topic</p>
+        <h1>Prepare a cat problem request.</h1>
+        <p>Describe the exact situation you want covered. This page creates a copyable draft locally; it does not send email or collect your details.</p>
       </div>
     </section>
     <section class="section">
       <div class="contact-layout">
-        <form class="contact-form card" data-static-form>
+        <form class="contact-form card" data-topic-form>
           <div>
             <label for="problem">Problem</label>
             <input id="problem" name="problem" type="text" placeholder="Example: cat tracks litter into the bed">
@@ -34,8 +34,11 @@ type: page
             <label for="details">Details</label>
             <textarea id="details" name="details" placeholder="What have you tried, what went wrong, and what kind of home setup does your cat have?"></textarea>
           </div>
-          <button class="button" type="submit">Send request</button>
-          <p class="form-note" data-form-message hidden>This demo form does not send email yet, but the page is ready for a form service later.</p>
+          <button class="button" type="submit">Create request draft</button>
+          <p class="form-note" data-form-message hidden>Your draft is ready below.</p>
+          <textarea class="request-output" data-request-output aria-label="Prepared request" hidden readonly></textarea>
+          <button class="button secondary" type="button" data-copy-request disabled>Copy request</button>
+          <p class="form-note" data-copy-message hidden></p>
         </form>
         <aside class="contact-aside">
           <div class="card callout">

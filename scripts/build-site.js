@@ -30,11 +30,11 @@ const categories = [
     eyebrow: "Litter box",
     description: "Tracking, smell, dust, scattered litter, box placement, liners, mats, scoops, and small-home litter routines.",
     planned: [
-      "Litter box dust control",
-      "Litter box in a bedroom",
-      "Covered vs open litter boxes",
-      "Best setup for multiple cats sharing boxes",
-      "Litter stuck in cat paws"
+      "Litter mat for long-haired cats",
+      "Cat-safe litter storage",
+      "Litter box near a washing machine",
+      "How to clean a litter mat",
+      "Litter box setup for a studio apartment"
     ]
   },
   {
@@ -43,11 +43,11 @@ const categories = [
     eyebrow: "Scratching",
     description: "Couch scratching, carpet scratching, door-frame scratching, nail care, scratcher placement, and furniture protection.",
     planned: [
-      "Cat scratching carpet corners",
       "Cat scratching door frame",
       "Cat ignores scratching post",
       "Cat nail trimming setup",
-      "Couch corner protection"
+      "Couch corner protection",
+      "Scratch-resistant rental setup"
     ]
   },
   {
@@ -56,11 +56,11 @@ const categories = [
     eyebrow: "Hair and cleaning",
     description: "Cat hair on clothes, furniture, bedding, car seats, laundry, vacuum routines, odor cleanup, and washable surfaces.",
     planned: [
-      "Cat hair on black clothes",
       "Cat hair in bed",
       "Cat hair in car seats",
       "Washable rug setup for cat homes",
-      "Enzyme cleaner starter guide"
+      "Enzyme cleaner starter guide",
+      "Cat hair cleanup for small apartments"
     ]
   },
   {
@@ -71,9 +71,9 @@ const categories = [
     planned: [
       "Wet cat food mess on floors",
       "Cat pushes water bowl around",
-      "Cat food ants setup",
       "Slow feeder for cats",
-      "Cat fountain cleaning setup"
+      "Cat fountain cleaning setup",
+      "Mess-free wet food station"
     ]
   },
   {
@@ -82,11 +82,11 @@ const categories = [
     eyebrow: "Travel",
     description: "Carrier avoidance, vet trips, car seat mess, calming travel setup, cleanup supplies, and safe carrier staging.",
     planned: [
-      "Cat carrier for cats that hate carriers",
       "Vet trip checklist for anxious cats",
       "Cat pee in carrier cleanup",
       "Car seat cover for cat trips",
-      "Carrier training starter setup"
+      "Carrier training starter setup",
+      "Safe overnight cat travel setup"
     ]
   },
   {
@@ -97,9 +97,9 @@ const categories = [
     planned: [
       "Small bedroom cat setup",
       "Cat tree for a narrow room",
-      "Hide litter box without trapping smell",
       "Window perch setup",
-      "Toy storage for small cat homes"
+      "Toy storage for small cat homes",
+      "Cat feeding station for a small kitchen"
     ]
   },
   {
@@ -108,11 +108,11 @@ const categories = [
     eyebrow: "Behavior support",
     description: "Problem-solving gear for common cat habits: night waking, boredom, counter surfing, food stealing, hiding, and stress cues.",
     planned: [
-      "Cat wakes me up at night",
       "Cat bored while owner works",
-      "Cat jumps on counters",
       "Cat eats too fast then vomits",
-      "New cat hiding setup"
+      "New cat hiding setup",
+      "Enrichment setup for indoor cats",
+      "Cat-safe counter alternative"
     ]
   }
 ];
@@ -184,11 +184,11 @@ function renderHeader(root) {
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="${root}"><img class="brand-logo" src="${root}assets/brand/favicon-192.png" alt="" width="34" height="34"><span>${site.name}</span></a>
-      <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">=</button>
+      <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">☰</button>
       <div class="nav-links" data-nav-links>
         <a href="${root}problems/">Problems</a>
         <a href="${root}about/">About</a>
-        <a href="${root}contact/">Contact</a>
+        <a href="${root}contact/">Suggest a topic</a>
         <a href="${root}affiliate-disclosure/">Disclosure</a>
       </div>
     </nav>
@@ -201,7 +201,7 @@ function renderFooter(root) {
     <div class="footer-inner">
       <span>${site.name}</span>
       <span>As an Amazon Associate, this site earns from qualifying purchases.</span>
-      <span><a href="${root}contact/">Contact</a> | <a href="${root}privacy/">Privacy</a> | <a href="${root}affiliate-disclosure/">Affiliate disclosure</a></span>
+      <span><a href="${root}contact/">Suggest a topic</a> | <a href="${root}privacy/">Privacy</a> | <a href="${root}affiliate-disclosure/">Affiliate disclosure</a></span>
     </div>
   </footer>`;
 }
@@ -290,6 +290,10 @@ function pageDisplayTitle(page) {
   return page.meta.title.replace(` | ${site.name}`, "");
 }
 
+function categoryDisplayName(slug) {
+  return categories.find((category) => category.slug === slug)?.eyebrow || "Problem";
+}
+
 function renderProblemCards(pages, currentPath) {
   if (!pages.length) {
     return `<div class="empty-state card">
@@ -302,7 +306,7 @@ function renderProblemCards(pages, currentPath) {
 ${pages.map((page) => {
     const href = relativeHref(currentPath, page.meta.path);
     return `<article class="directory-item">
-  <span class="pill">${escapeHtml(page.meta.category || "Problem")}</span>
+  <span class="pill">${escapeHtml(categoryDisplayName(page.meta.category))}</span>
   <div>
     <h3>${escapeHtml(pageDisplayTitle(page))}</h3>
     <p>${escapeHtml(page.meta.summary || page.meta.description)}</p>

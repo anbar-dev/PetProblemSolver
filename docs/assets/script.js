@@ -5,6 +5,8 @@ if (menuButton && navLinks) {
   menuButton.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("open");
     menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    menuButton.textContent = isOpen ? "×" : "☰";
   });
 }
 
@@ -33,6 +35,11 @@ const finderResults = {
     title: "Open feeding and water mess.",
     copy: "Bowl spills, ants, messy wet food, and fast eating all need station design before random bowls.",
     href: "problems/feeding-water/"
+  },
+  other: {
+    title: "Browse all cat problems.",
+    copy: "Open the full problem map for travel, behavior support, small-home setups, and every published fix.",
+    href: "problems/"
   }
 };
 
@@ -70,10 +77,38 @@ document.querySelectorAll(".product-media img").forEach((image) => {
   image.addEventListener("error", showFallback);
 });
 
-document.querySelectorAll("[data-static-form]").forEach((form) => {
+document.querySelectorAll("[data-topic-form]").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    const problem = form.elements.problem?.value.trim();
+    const category = form.elements.category?.value.trim();
+    const details = form.elements.details?.value.trim();
+    const output = form.querySelector("[data-request-output]");
     const message = form.querySelector("[data-form-message]");
-    if (message) message.hidden = false;
+    const copyButton = form.querySelector("[data-copy-request]");
+    if (!output || !message) return;
+    output.value = `Topic: ${problem || "Cat problem"}\nCategory: ${category || "Not specified"}\n\nDetails:\n${details || "No details added yet."}`;
+    output.hidden = false;
+    message.hidden = false;
+    if (copyButton) copyButton.disabled = false;
+    output.focus();
+  });
+});
+
+document.querySelectorAll("[data-copy-request]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const form = button.closest("form");
+    const output = form?.querySelector("[data-request-output]");
+    const message = form?.querySelector("[data-copy-message]");
+    if (!output || !message) return;
+    try {
+      await navigator.clipboard.writeText(output.value);
+      message.textContent = "Request copied. Paste it into your email or notes.";
+    } catch {
+      output.focus();
+      output.select();
+      message.textContent = "Select the text above and copy it manually.";
+    }
+    message.hidden = false;
   });
 });

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | Cat Problem Solver</title>
-  <meta name="description" content="Request a future Cat Problem Solver article or send feedback.">
+  <title>Suggest a Topic | Cat Problem Solver</title>
+  <meta name="description" content="Prepare a clear topic request for a future Cat Problem Solver article.">
   <link rel="canonical" href="https://catproblemsolver.com/contact/">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/brand/favicon-192.png">
   <link rel="apple-touch-icon" sizes="512x512" href="../assets/brand/favicon-512.png">
-  <link rel="stylesheet" href="../assets/style.css?v=2921de57c7">
+  <link rel="stylesheet" href="../assets/style.css?v=4a2f169a37">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FY92MXS8B"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -23,11 +23,11 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="../"><img class="brand-logo" src="../assets/brand/favicon-192.png" alt="" width="34" height="34"><span>Cat Problem Solver</span></a>
-      <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">=</button>
+      <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">☰</button>
       <div class="nav-links" data-nav-links>
         <a href="../problems/">Problems</a>
         <a href="../about/">About</a>
-        <a href="../contact/">Contact</a>
+        <a href="../contact/">Suggest a topic</a>
         <a href="../affiliate-disclosure/">Disclosure</a>
       </div>
     </nav>
@@ -35,14 +35,14 @@
   <main>
 <section class="page-hero">
       <div class="page-title">
-        <p class="eyebrow">Contact</p>
-        <h1>Request a cat problem fix.</h1>
-        <p>Use this placeholder form to shape future pages around real, specific cat-owner problems.</p>
+        <p class="eyebrow">Suggest a topic</p>
+        <h1>Prepare a cat problem request.</h1>
+        <p>Describe the exact situation you want covered. This page creates a copyable draft locally; it does not send email or collect your details.</p>
       </div>
     </section>
     <section class="section">
       <div class="contact-layout">
-        <form class="contact-form card" data-static-form>
+        <form class="contact-form card" data-topic-form>
           <div>
             <label for="problem">Problem</label>
             <input id="problem" name="problem" type="text" placeholder="Example: cat tracks litter into the bed">
@@ -63,8 +63,11 @@
             <label for="details">Details</label>
             <textarea id="details" name="details" placeholder="What have you tried, what went wrong, and what kind of home setup does your cat have?"></textarea>
           </div>
-          <button class="button" type="submit">Send request</button>
-          <p class="form-note" data-form-message hidden>This demo form does not send email yet, but the page is ready for a form service later.</p>
+          <button class="button" type="submit">Create request draft</button>
+          <p class="form-note" data-form-message hidden>Your draft is ready below.</p>
+          <textarea class="request-output" data-request-output aria-label="Prepared request" hidden readonly></textarea>
+          <button class="button secondary" type="button" data-copy-request disabled>Copy request</button>
+          <p class="form-note" data-copy-message hidden></p>
         </form>
         <aside class="contact-aside">
           <div class="card callout">
@@ -84,7 +87,7 @@
     <div class="footer-inner">
       <span>Cat Problem Solver</span>
       <span>As an Amazon Associate, this site earns from qualifying purchases.</span>
-      <span><a href="../contact/">Contact</a> | <a href="../privacy/">Privacy</a> | <a href="../affiliate-disclosure/">Affiliate disclosure</a></span>
+      <span><a href="../contact/">Suggest a topic</a> | <a href="../privacy/">Privacy</a> | <a href="../affiliate-disclosure/">Affiliate disclosure</a></span>
     </div>
   </footer>
   <script src="../assets/script.js"></script>
