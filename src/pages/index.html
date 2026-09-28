@@ -13,66 +13,52 @@ type: page
           </div>
           <p class="eyebrow">Problem-first cat gear</p>
           <h1>Fix the annoying cat problem first.</h1>
-          <p class="hero-copy">Practical setups for litter tracking, box smell, couch scratching, cat hair, water bowl mess, carrier panic, and night waking. Each page starts with what to try first, what to buy only if needed, and what to skip.</p>
+          <p class="hero-copy">Find practical fixes for litter mess, scratching, cat hair, spilled water, carrier trouble, and more. Each page says what to try first and what to skip.</p>
+          <form class="problem-search" data-problem-search role="search" autocomplete="off">
+            <label for="problem-query">What problem is your cat causing?</label>
+            <div class="problem-search-field">
+              <input id="problem-query" name="problem" type="search" placeholder="e.g. litter everywhere" enterkeyhint="search" aria-controls="problem-search-results">
+              <button type="submit" aria-label="Search cat problems">Search</button>
+            </div>
+            <div id="problem-search-results" class="problem-search-results" data-problem-search-results aria-live="polite" hidden></div>
+          </form>
           <div class="hero-actions">
             <a class="button" href="problems/">View all problems</a>
             <a class="button secondary" href="#categories">Browse categories</a>
           </div>
-          <div class="trust-strip compact-strip">
-            <div><strong>Problem first</strong><span>Start with the mess, habit, or stressful moment.</span></div>
-            <div><strong>Buy priority</strong><span>Know the first useful purchase before extras.</span></div>
-            <div><strong>Skip notes</strong><span>Good advice says what not to buy.</span></div>
-          </div>
         </div>
         <aside class="diagnostic-panel">
           <img src="assets/images/cat-problem-solver-hero.png" alt="A calm indoor cat beside tidy litter, scratching, feeding, and cleaning gear">
-          <div class="finder-panel">
-            <p class="eyebrow">Quick picker</p>
-            <h2>What are you trying to fix?</h2>
-            <div class="choice-grid" aria-label="Cat problem choices">
-              <button class="choice active" type="button" data-choice="litter"><strong>Litter mess</strong><span>Tracking, smell, dust.</span></button>
-              <button class="choice" type="button" data-choice="scratching"><strong>Scratching</strong><span>Couches, carpet, doors.</span></button>
-              <button class="choice" type="button" data-choice="cleaning"><strong>Hair cleanup</strong><span>Clothes, bedding, furniture.</span></button>
-              <button class="choice" type="button" data-choice="feeding"><strong>Food or water</strong><span>Spills, ants, fast eating.</span></button>
-              <button class="choice" type="button" data-choice="other"><strong>Other problem</strong><span>Travel, behavior, small homes.</span></button>
-            </div>
-          </div>
-          <div class="result-box">
-            <p class="eyebrow">Suggested path</p>
-            <h2 data-result-title>Start with litter box problems.</h2>
-            <p data-result-copy>Tracking, smell, dust, and box placement usually need a better daily setup before bigger purchases.</p>
-            <a class="button secondary" data-result-link href="problems/litter-box/">Open suggested category</a>
-          </div>
+          <div class="diagnostic-caption"><strong>Find the exact fix.</strong><span>Start with the behavior you see. Each problem page explains what to try before buying anything.</span></div>
         </aside>
       </div>
     </section>
 
     <section class="section compact">
       <div class="split-heading">
-        <p class="eyebrow">Start here</p>
+        <p class="eyebrow">Start with your problem</p>
         <div>
-          <h2>Common cat problems.</h2>
-          <p>These are the specific problems people search for after the third cleanup, the scratched couch corner, or the vet appointment that starts with a wrestling match.</p>
+          <h2>Does one of these sound familiar?</h2>
+          <p>Open the problem that sounds closest to yours. Every link goes straight to a specific fix.</p>
         </div>
       </div>
-      <div class="fix-list">
-        <article class="fix-row">
-          <span class="feature-number">01</span>
-          <div><h3>Litter tracking everywhere?</h3><p>Fix the box exit path before buying random mats that your cat jumps over.</p></div>
-          <a class="link" href="problems/litter-box/litter-tracking-everywhere/">Open fix</a>
-        </article>
-        <article class="fix-row">
-          <span class="feature-number">02</span>
-          <div><h3>Couch getting shredded?</h3><p>Redirect the habit with a better scratch target, then protect only the sofa spot your cat already chose.</p></div>
-          <a class="link" href="problems/scratching/cat-scratching-couch/">Open fix</a>
-        </article>
-        <article class="fix-row">
-          <span class="feature-number">03</span>
-          <div><h3>Water bowl chaos?</h3><p>Match the fix to the behavior: splashing, pushing, fountain mess, or wet paws around the station.</p></div>
-          <a class="link" href="problems/feeding-water/cat-water-bowl-mess/">Open fix</a>
-        </article>
+      <div class="home-problem-grid">
+        <a class="home-problem-link" href="problems/litter-box/litter-tracking-everywhere/"><span>Litter box</span><strong>Litter ends up everywhere</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/litter-box/cat-kicks-litter-out/"><span>Litter box</span><strong>My cat kicks litter out of the box</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/litter-box/litter-box-smell-small-home/"><span>Litter box</span><strong>The litter box smells up my apartment</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/litter-box/cat-pee-outside-box-cleanup/"><span>Litter box</span><strong>My cat peed outside the litter box</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/scratching/cat-scratching-couch/"><span>Scratching</span><strong>My cat scratches the couch</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/scratching/cat-scratching-door-frame/"><span>Scratching</span><strong>My cat scratches the door frame</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/hair-cleaning/cat-hair-black-clothes/"><span>Hair cleanup</span><strong>Cat hair sticks to my black clothes</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/hair-cleaning/cat-hair-everywhere/"><span>Hair cleanup</span><strong>Cat hair is everywhere</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/feeding-water/cat-water-bowl-mess/"><span>Food &amp; water</span><strong>My cat keeps tipping the water bowl</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/feeding-water/ants-in-cat-food/"><span>Food &amp; water</span><strong>Ants keep getting into my cat’s food</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/travel-carriers/cat-carrier-hates-carrier/"><span>Travel</span><strong>My cat refuses to get in the carrier</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
+        <a class="home-problem-link" href="problems/behavior-support/cat-wakes-me-up-at-night/"><span>Behavior</span><strong>My cat keeps waking me up at night</strong><span class="home-problem-arrow" aria-hidden="true">↗</span></a>
       </div>
     </section>
+
+    <!-- problem-search-index -->
 
     <section class="section" id="categories">
       <div class="split-heading">

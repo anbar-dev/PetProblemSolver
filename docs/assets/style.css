@@ -288,6 +288,157 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
+.diagnostic-caption {
+  display: grid;
+  gap: 4px;
+  padding: 22px 24px;
+}
+
+.diagnostic-caption span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.problem-search {
+  position: relative;
+  max-width: 660px;
+  margin-top: 28px;
+}
+
+.problem-search label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.problem-search-field {
+  display: flex;
+  border: 1px solid #b9c6d1;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.problem-search-field:focus-within {
+  outline: 3px solid rgba(15, 118, 110, 0.22);
+  border-color: var(--sage-dark);
+}
+
+.problem-search input {
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 12px 16px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+}
+
+.problem-search input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.problem-search-field button {
+  flex: 0 0 auto;
+  margin: 4px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--sage-dark);
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.problem-search-results {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: min(420px, 55vh);
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(17, 24, 39, 0.14);
+}
+
+.problem-search-results a,
+.problem-search-empty {
+  display: grid;
+  gap: 2px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.problem-search-results a:last-child {
+  border-bottom: 0;
+}
+
+.problem-search-results a:hover,
+.problem-search-results a:focus-visible {
+  background: #f0fdfa;
+}
+
+.problem-search-results small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.home-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.home-problem-link {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 116px;
+  padding: 18px 42px 18px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  text-decoration: none;
+}
+
+.home-problem-link:hover,
+.home-problem-link:focus-visible {
+  border-color: var(--sage-dark);
+  background: #f0fdfa;
+}
+
+.home-problem-link > span:first-child {
+  color: var(--coral);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.home-problem-link strong {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.home-problem-arrow {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  color: var(--sage-dark);
+  font-size: 20px;
+}
+
 .section {
   max-width: 1180px;
   margin: 0 auto;
@@ -1092,6 +1243,14 @@ h1 {
     padding-bottom: 38px;
   }
 
+  .diagnostic-panel {
+    display: none;
+  }
+
+  .home-problem-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .diagnostic-panel > img {
     height: 230px;
   }
@@ -1170,6 +1329,36 @@ h1 {
     width: auto;
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .home-intro .hero-logo {
+    display: none;
+  }
+
+  .home-intro h1 {
+    font-size: 38px;
+  }
+
+  .home-intro .hero-copy {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .problem-search {
+    margin-top: 20px;
+  }
+
+  .hero-actions {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .hero-actions .button {
+    min-height: 42px;
+    padding-inline: 10px;
+    font-size: 13px;
   }
 
   .diagnostic-panel > img {
@@ -1178,6 +1367,19 @@ h1 {
 
   .compact-strip {
     margin-top: 32px;
+  }
+
+  .home-problem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-problem-link {
+    min-height: 0;
+    padding-block: 15px;
+  }
+
+  .problem-search-field button {
+    padding-inline: 12px;
   }
 
   .hero-inner,

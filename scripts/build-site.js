@@ -268,6 +268,37 @@ function hydrateCategoryCounts(body, pages) {
   });
 }
 
+const searchAliases = {
+  "/problems/litter-box/litter-tracking-everywhere/": ["litter ends up everywhere", "la lettiera finisce ovunque"],
+  "/problems/scratching/cat-scratching-couch/": ["my cat scratches the couch", "graffia il divano"],
+  "/problems/hair-cleaning/cat-hair-black-clothes/": ["cat hair on clothes", "peli sui vestiti"],
+  "/problems/feeding-water/cat-water-bowl-mess/": ["cat tips over the water bowl", "rovescia sempre l'acqua"]
+};
+
+function hydrateProblemSearch(body, pages) {
+  const marker = "<!-- problem-search-index -->";
+  if (!body.includes(marker)) return body;
+
+  const published = pages.filter((page) => page.meta.type === "problem");
+  const publishedPaths = new Set(published.map((page) => page.meta.path));
+  const featuredPaths = [...body.matchAll(/class="home-problem-link" href="([^"]+)"/g)]
+    .map((match) => `/${match[1]}`);
+  if (featuredPaths.length < 8 || featuredPaths.length > 12 || featuredPaths.some((url) => !publishedPaths.has(url))) {
+    throw new Error("Homepage featured problems must link to 8–12 published problem pages.");
+  }
+
+  const index = published.map((page) => ({
+    path: page.meta.path,
+    title: pageDisplayTitle(page),
+    category: categoryDisplayName(page.meta.category),
+    summary: page.meta.summary || "",
+    description: page.meta.description,
+    aliases: searchAliases[page.meta.path] || []
+  }));
+  const json = JSON.stringify(index).replace(/</g, "\\u003c");
+  return body.replace(marker, `<script type="application/json" id="problem-search-index">${json}</script>`);
+}
+
 function categoryCard(category, pages) {
   const count = categoryArticleCount(category, pages);
   const tone = categoryToneClass(category);
@@ -492,7 +523,7 @@ function build() {
         title: page.meta.title,
         description: page.meta.description,
         urlPath: page.meta.path,
-        body: hydrateCategoryCounts(page.body, pages)
+        body: hydrateProblemSearch(hydrateCategoryCounts(page.body, pages), pages)
       })
     });
   }
